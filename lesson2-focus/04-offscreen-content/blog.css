@@ -41,6 +41,11 @@ h6, .h6 {
           box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
 }
 
+/* Offscreen Modal */
+.modal {
+  display: none;
+}
+
 /* Nav links */
 .blog-nav-item {
   position: relative;
@@ -166,9 +171,4 @@ h6, .h6 {
 }
 .blog-footer a {
   color: #00598f;
-}
-
-.modal {
-  display: block;
-  left: 9999px;
 }
