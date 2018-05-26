@@ -104,7 +104,6 @@
         },
 
         /**
-         * FIXME: need to call this method somewhere :)
          * Sets the aria-activedescendant value of the textbox to the ID of the given element.
          * @param {Element} el
          */
@@ -161,6 +160,7 @@
                     foundItems++;
                     item.hidden = false;
                     this.visibleItems.push(item);
+                    item.setAttribute('aria-posinset', foundItems);
                 } else {
                     item.hidden = true;
                     item.classList.remove('active');
@@ -169,7 +169,7 @@
             if (foundItems === 0) {
                 this.hide();
             } else {
-                // FIXME: ChromeVox reports the wrong list size and position
+                this.visibleItems.map((item) => item.setAttribute('aria-setsize', foundItems));
             }
         },
 
@@ -236,7 +236,7 @@
                 active.classList.remove('active');
             newActive.classList.add('active');
 
-            // FIXME: need to ensure focus stays on textbox, but report active list option
+          this.textbox.setActiveDescendant(newActive);
         }
     };
 
