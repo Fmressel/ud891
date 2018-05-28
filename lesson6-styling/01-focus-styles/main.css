@@ -30,7 +30,6 @@ a:focus {
 .nav > li > a:focus,
 .jumbotron .mdl-button:focus,
 .mdl-button.raised:focus {
-  box-shadow: 0 0 1px 1px grey;
   text-decoration: underline;
   background-color: #ff6060;
   color: white;
